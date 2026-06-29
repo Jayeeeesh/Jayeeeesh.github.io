@@ -1,246 +1,376 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jayesh Dipak Thakur — Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-
+  <body>
     <!-- Navigation Bar -->
     <nav>
-        <div class="logo">JDT</div>
-        <ul class="nav-links">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+      <div class="logo">JDT</div>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
 
     <!-- Hero Section -->
     <section id="hero">
-
-        <!-- Left Side — Text -->
-        <div class="hero-left">
-            <p class="hero-tag hero-anim" style="--d:0.1s">IBM Certified · Full Stack JavaScript Developer</p>
-            <h1 class="hero-anim" style="--d:0.25s">Jayesh Dipak Thakur</h1>
-            <h1 class="hero-anim" style="--d:0.4s">I Build <span>Scalable</span><br>Web Applications.</h1>
-            <p class="hero-desc hero-anim" style="--d:0.55s">
-                From responsive frontends to cloud-native backends —
-                I design, develop, and deploy complete web solutions
-                using modern technologies.
-            </p>
-            <p class="hero-stack hero-anim" style="--d:0.65s">
-                React · Node.js · Express · MongoDB · Docker · Kubernetes
-            </p>
-            <div class="hero-buttons hero-anim" style="--d:0.78s">
-                <a href="#projects" class="btn-primary">View Projects</a>
-                <a href="#contact" class="btn-secondary">Contact Me</a>
-            </div>
+      <!-- Left Side — Text -->
+      <div class="hero-left">
+        <p class="hero-tag hero-anim" style="--d: 0.1s">
+          Full Stack Developer · IBM Certified · Open to Work
+        </p>
+        <h1 class="hero-anim" style="--d: 0.4s">
+          I Build & <span>Ship Full&nbsp;Stack</span> Products.
+        </h1>
+        <p class="hero-desc hero-anim" style="--d: 0.55s">
+          Full Stack Developer specializing in MERN stack. I design, build, and
+          deploy scalable web applications with clean architecture and
+          production-ready code.
+        </p>
+        <p class="hero-stack hero-anim" style="--d: 0.65s">
+          React · Redux Toolkit · Node.js · MongoDB · Tailwind CSS · Vercel
+        </p>
+        <div class="hero-buttons hero-anim" style="--d: 0.78s">
+          <a href="#projects" class="btn-primary">View Projects</a>
+          <a href="#contact" class="btn-secondary">Contact Me</a>
         </div>
+      </div>
 
-        <!-- Right Side — Photo -->
-        <div class="hero-right hero-anim" style="--d:0.5s">
-            <div class="hero-photo-wrapper">
-                <img src="photo.jpg" alt="Jayesh Dipak Thakur" class="hero-photo">
-            </div>
+      <!-- Right Side — Photo -->
+      <div class="hero-right hero-anim" style="--d: 0.5s">
+        <div class="hero-photo-wrapper">
+          <img src="photo.jpg" alt="Jayesh Dipak Thakur" class="hero-photo" />
         </div>
-
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="about">
-        <div class="section-label">About Me</div>
-        <h2>Who I Am</h2>
-        <div class="about-grid">
-            <div class="about-text">
-                <p>Hi! I am Jayesh Dipak Thakur, a Full Stack JavaScript Developer from Mumbai. I have completed the IBM Full Stack JavaScript Developer Professional Certificate on Coursera — a 12 course program.</p>
-                <p>I can build and deploy cloud-native back-end applications using Node.js, NoSQL databases, containers, microservices, and serverless architecture. I also develop websites and front-end software using HTML, CSS, JavaScript, and React.</p>
-                <p>I follow DevOps practices and Agile methodologies to continuously build and deploy software using CI/CD tools.</p>
-                <p>I am currently looking for opportunities where I can apply my skills and grow as a developer.</p>
-            </div>
-            <div class="about-stats">
-                <div class="stat-card">
-                    <div class="stat-number">12</div>
-                    <div class="stat-label">IBM Courses Completed</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">9</div>
-                    <div class="stat-label">Certificates Earned</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">5+</div>
-                    <div class="stat-label">Technologies Mastered</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">1</div>
-                    <div class="stat-label">Full Stack Project Built</div>
-                </div>
-            </div>
+      <div class="section-label">About Me</div>
+      <h2>Who I Am</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Hi! I am Jayesh Dipak Thakur, a Full Stack JavaScript Developer from
+            Mumbai. I have completed the IBM Full Stack JavaScript Developer
+            Professional Certificate on Coursera — a 12 course program.
+          </p>
+          <p>
+            I build production-grade MERN stack applications with JWT
+            authentication, Redux Toolkit state management, and RESTful APIs. I
+            have completed internships at Unified Mentor and Amdox Technologies
+            building real-world platforms.
+          </p>
+          <p>
+            I follow DevOps practices and Agile methodologies to continuously
+            build and deploy software using CI/CD tools, Docker, and cloud
+            platforms.
+          </p>
+          <p>
+            I am currently looking for opportunities where I can apply my skills
+            and grow as a developer.
+          </p>
         </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-number">12</div>
+            <div class="stat-label">IBM Courses Completed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">9</div>
+            <div class="stat-label">Certificates Earned</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Technologies Mastered</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">2</div>
+            <div class="stat-label">Full Stack Projects Built</div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills">
-        <div class="section-label">Tech Stack</div>
-        <h2>Skills & Tools</h2>
+      <div class="section-label">Tech Stack</div>
+      <h2>Skills & Tools</h2>
 
-        <!-- Frontend -->
-        <h3>Frontend</h3>
-        <ul>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Ajax</li>
-            <li>Responsive Web Design</li>
-        </ul>
+      <!-- Frontend -->
+      <h3>Frontend</h3>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Redux Toolkit</li>
+        <li>Tailwind CSS</li>
+        <li>Responsive Web Design</li>
+        <li>Axios</li>
+      </ul>
 
-        <!-- Backend -->
-        <h3>Backend</h3>
-        <ul>
-            <li>Node.js</li>
-            <li>Express.js</li>
-            <li>MongoDB</li>
-            <li>RESTful APIs</li>
-            <li>Server Side Development</li>
-            <li>NoSQL</li>
-            <li>Database Design</li>
-        </ul>
+      <!-- Backend -->
+      <h3>Backend</h3>
+      <ul>
+        <li>Node.js</li>
+        <li>Express.js</li>
+        <li>MongoDB</li>
+        <li>Mongoose</li>
+        <li>RESTful APIs</li>
+        <li>JWT Authentication</li>
+        <li>Role-Based Access Control</li>
+        <li>NoSQL</li>
+      </ul>
 
-        <!-- DevOps & Cloud -->
-        <h3>DevOps & Cloud</h3>
-        <ul>
-            <li>Docker</li>
-            <li>Kubernetes</li>
-            <li>Istio</li>
-            <li>CI/CD</li>
-            <li>Cloud Deployment</li>
-            <li>Cloud-Native Computing</li>
-            <li>Azure DevOps</li>
-            <li>Application Deployment</li>
-        </ul>
+      <!-- DevOps & Cloud -->
+      <h3>DevOps & Cloud</h3>
+      <ul>
+        <li>Docker</li>
+        <li>Kubernetes</li>
+        <li>CI/CD</li>
+        <li>Vercel</li>
+        <li>Render</li>
+        <li>MongoDB Atlas</li>
+        <li>Cloud Deployment</li>
+        <li>Git & GitHub</li>
+      </ul>
 
-        <!-- Software Engineering -->
-        <h3>Software Engineering</h3>
-        <ul>
-            <li>Software Architecture</li>
-            <li>Software Development</li>
-            <li>Software Development Life Cycle</li>
-            <li>Git & GitHub</li>
-            <li>Agile Methodologies</li>
-        </ul>
-
+      <!-- Software Engineering -->
+      <h3>Software Engineering</h3>
+      <ul>
+        <li>Software Architecture</li>
+        <li>Agile Methodologies</li>
+        <li>REST API Design</li>
+        <li>Swagger / OpenAPI</li>
+        <li>Software Development Life Cycle</li>
+      </ul>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
-        <div class="section-label">My Work</div>
-        <h2>Projects</h2>
+      <div class="section-label">My Work</div>
+      <h2>Projects</h2>
 
-        <div class="project-card">
-            <div class="project-top">
-                <h3>GiftLink — Full Stack Web Application</h3>
-                <span class="project-badge">Capstone Project</span>
-            </div>
-            <p>A full stack web application built as part of the IBM Full Stack JavaScript Developer Capstone Project. It includes a React frontend, a Node.js and Express backend, MongoDB database, sentiment analysis feature, and Docker containerization.</p>
-            <div class="project-stack">
-                <span>React</span>
-                <span>Node.js</span>
-                <span>Express</span>
-                <span>MongoDB</span>
-                <span>Docker</span>
-                <span>REST APIs</span>
-            </div>
-            <a href="https://github.com/Jayeeeesh/fullstack-capstone-project" target="_blank">View on GitHub →</a>
-            <a href="https://giftwebsite.2abm17q9g5dw.us-south.codeengine.appdomain.cloud" target="_blank">Live Demo →</a>
+      <div class="projects-grid">
+        <!-- RentEase — Featured -->
+        <div class="project-card featured">
+          <div class="project-top">
+            <h3>RentEase — Furniture & Appliance Rental Platform</h3>
+            <span class="project-badge live">✦ Live</span>
+          </div>
+          <p>
+            A production-grade full stack rental platform. Features JWT auth
+            with refresh token rotation, race condition-safe Axios interceptor,
+            role-based Admin Dashboard with product CRUD, order & rental
+            management, maintenance request system, and a fully responsive
+            mobile-first UI.
+          </p>
+          <div class="project-stack">
+            <span>React</span>
+            <span>Redux Toolkit</span>
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>MongoDB</span>
+            <span>Tailwind CSS v4</span>
+            <span>JWT Auth</span>
+            <span>Vercel</span>
+            <span>Render</span>
+          </div>
+          <div class="project-links">
+            <a
+              href="https://github.com/Jayeeeesh/RentEase"
+              target="_blank"
+              class="btn-github"
+              >⌥ GitHub</a
+            >
+            <a
+              href="https://rent-ease-five-phi.vercel.app"
+              target="_blank"
+              class="btn-live"
+              >↗ Live Demo</a
+            >
+          </div>
         </div>
 
+        <!-- GiftLink -->
+        <div class="project-card">
+          <div class="project-top">
+            <h3>GiftLink — Full Stack Web Application</h3>
+            <span class="project-badge">IBM Capstone</span>
+          </div>
+          <p>
+            A full stack web application built as part of the IBM Full Stack
+            JavaScript Developer Capstone Project. Includes a React frontend,
+            Node.js and Express backend, MongoDB database, sentiment analysis
+            feature, and Docker containerization.
+          </p>
+          <div class="project-stack">
+            <span>React</span>
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>MongoDB</span>
+            <span>Docker</span>
+            <span>REST APIs</span>
+          </div>
+          <div class="project-links">
+            <a
+              href="https://github.com/Jayeeeesh/fullstack-capstone-project"
+              target="_blank"
+              class="btn-github"
+              >⌥ GitHub</a
+            >
+            <a
+              href="https://giftwebsite.2abm17q9g5dw.us-south.codeengine.appdomain.cloud"
+              target="_blank"
+              class="btn-live"
+              >↗ Live Demo</a
+            >
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Certifications Section -->
     <section id="certifications">
-        <div class="section-label">IBM Certified</div>
-        <h2>Certifications</h2>
-        <p class="cert-subtitle">IBM Full Stack JavaScript Developer — 12 Course Professional Certificate</p>
+      <div class="section-label">IBM Certified</div>
+      <h2>Certifications</h2>
+      <p class="cert-subtitle">
+        IBM Full Stack JavaScript Developer — 12 Course Professional Certificate
+      </p>
 
-        <div class="cert-card">
-            <h3>Introduction to HTML, CSS & JavaScript</h3>
-            <a href="https://www.coursera.org/account/accomplishments/records/SNN5QUCZ92XZ" target="_blank">View Certificate</a>
-        </div>
+      <div class="cert-card">
+        <h3>Introduction to HTML, CSS & JavaScript</h3>
+        <a
+          href="https://www.coursera.org/account/accomplishments/records/SNN5QUCZ92XZ"
+          target="_blank"
+          >View Certificate</a
+        >
+      </div>
 
-        <div class="cert-card">
-            <h3>Getting Started with Git and GitHub</h3>
-            <a href="https://www.coursera.org/account/accomplishments/records/PAFWMLHJXQS1" target="_blank">View Certificate</a>
-        </div>
+      <div class="cert-card">
+        <h3>Getting Started with Git and GitHub</h3>
+        <a
+          href="https://www.coursera.org/account/accomplishments/records/PAFWMLHJXQS1"
+          target="_blank"
+          >View Certificate</a
+        >
+      </div>
 
-        <div class="cert-card">
-            <h3>JavaScript Programming Essentials</h3>
-            <a href="https://www.coursera.org/account/accomplishments/records/VL6SU1P9RAM2" target="_blank">View Certificate</a>
-        </div>
+      <div class="cert-card">
+        <h3>JavaScript Programming Essentials</h3>
+        <a
+          href="https://www.coursera.org/account/accomplishments/records/VL6SU1P9RAM2"
+          target="_blank"
+          >View Certificate</a
+        >
+      </div>
 
-        <div class="cert-card">
-            <h3>Developing Front-End Apps with React</h3>
-            <a href="https://www.coursera.org/account/accomplishments/records/JXAVW34OSU83" target="_blank">View Certificate</a>
-        </div>
+      <div class="cert-card">
+        <h3>Developing Front-End Apps with React</h3>
+        <a
+          href="https://www.coursera.org/account/accomplishments/records/JXAVW34OSU83"
+          target="_blank"
+          >View Certificate</a
+        >
+      </div>
 
-        <div class="cert-card">
-            <h3>Developing Back-End Apps with Node.js and Express</h3>
-            <a href="https://www.coursera.org/account/accomplishments/records/NOIFS5E5RV82" target="_blank">View Certificate</a>
-        </div>
+      <div class="cert-card">
+        <h3>Developing Back-End Apps with Node.js and Express</h3>
+        <a
+          href="https://www.coursera.org/account/accomplishments/records/NOIFS5E5RV82"
+          target="_blank"
+          >View Certificate</a
+        >
+      </div>
 
-        <div class="cert-card">
-            <h3>Get Started with Cloud Native, DevOps, Agile and NoSQL</h3>
-            <a href="https://www.coursera.org/account/accomplishments/records/78VFRNI4HC27" target="_blank">View Certificate</a>
-        </div>
+      <div class="cert-card">
+        <h3>Get Started with Cloud Native, DevOps, Agile and NoSQL</h3>
+        <a
+          href="https://www.coursera.org/account/accomplishments/records/78VFRNI4HC27"
+          target="_blank"
+          >View Certificate</a
+        >
+      </div>
 
-        <div class="cert-card">
-            <h3>Introduction to Containers with Docker, Kubernetes & OpenShift</h3>
-            <a href="https://www.coursera.org/account/accomplishments/records/GX2KS7A4DVEX" target="_blank">View Certificate</a>
-        </div>
+      <div class="cert-card">
+        <h3>Introduction to Containers with Docker, Kubernetes & OpenShift</h3>
+        <a
+          href="https://www.coursera.org/account/accomplishments/records/GX2KS7A4DVEX"
+          target="_blank"
+          >View Certificate</a
+        >
+      </div>
 
-        <div class="cert-card">
-            <h3>Application Development using Microservices and Serverless</h3>
-            <a href="https://www.coursera.org/account/accomplishments/records/LKBWP1WCGDFC" target="_blank">View Certificate</a>
-        </div>
+      <div class="cert-card">
+        <h3>Application Development using Microservices and Serverless</h3>
+        <a
+          href="https://www.coursera.org/account/accomplishments/records/LKBWP1WCGDFC"
+          target="_blank"
+          >View Certificate</a
+        >
+      </div>
 
-        <div class="cert-card">
-            <h3>Node.js & MongoDB: Developing Back-end Database Applications</h3>
-            <a href="https://coursera.org/share/86e3a29b4634cc89ea58d2adbc35fd71" target="_blank">View Certificate</a>
-        </div>
+      <div class="cert-card">
+        <h3>Node.js & MongoDB: Developing Back-end Database Applications</h3>
+        <a
+          href="https://coursera.org/share/86e3a29b4634cc89ea58d2adbc35fd71"
+          target="_blank"
+          >View Certificate</a
+        >
+      </div>
 
-        <div class="cert-card">
-            <h3>JavaScript Full Stack Capstone Project</h3>
-            <a href="https://www.coursera.org/account/accomplishments/records/FKD7HGCJNZBY" target="_blank">View Certificate</a>
-        </div>
-
+      <div class="cert-card">
+        <h3>JavaScript Full Stack Capstone Project</h3>
+        <a
+          href="https://www.coursera.org/account/accomplishments/records/FKD7HGCJNZBY"
+          target="_blank"
+          >View Certificate</a
+        >
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
-        <div class="section-label">Get In Touch</div>
-        <h2>Contact Me</h2>
-        <p class="contact-sub">I am currently looking for opportunities. Feel free to reach out!</p>
-        <div class="contact-links">
-            <a href="mailto:jayeshthakur132@gmail.com">📧 Email</a>
-            <a href="https://github.com/Jayeeeesh" target="_blank">🐙 GitHub</a>
-            <a href="https://www.linkedin.com/in/jayesh-thakur-742a7a411" target="_blank">💼 LinkedIn</a>
-        </div>
+      <div class="section-label">Get In Touch</div>
+      <h2>Contact Me</h2>
+      <p class="contact-sub">
+        I am currently looking for opportunities. Feel free to reach out!
+      </p>
+      <div class="contact-links">
+        <a href="mailto:jayeshthakur132@gmail.com">📧 Email</a>
+        <a href="https://github.com/Jayeeeesh" target="_blank">🐙 GitHub</a>
+        <a
+          href="https://www.linkedin.com/in/jayesh-thakur-742a7a411"
+          target="_blank"
+          >💼 LinkedIn</a
+        >
+      </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2025 Jayesh Dipak Thakur — Built with HTML, CSS & JavaScript</p>
+      <p>© 2026 Jayesh Dipak Thakur — Built with HTML, CSS & JavaScript</p>
     </footer>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
