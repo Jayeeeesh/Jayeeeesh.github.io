@@ -9,6 +9,7 @@ body {
   min-width: 320px;
   background: #ffffff;
   color: #0f172a;
+
   font-family:
     Inter,
     ui-sans-serif,
@@ -17,8 +18,14 @@ body {
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
+
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 button,
@@ -30,7 +37,43 @@ a {
   text-decoration: none;
 }
 
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img,
+svg {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
 ::selection {
-  background: #bfdbfe;
+  background: #dbeafe;
   color: #0f172a;
+}
+
+:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -15,11 +15,11 @@ function Projects() {
         {/* Section introduction */}
         <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
           <SectionHeading
+            id="projects-heading"
             eyebrow="Selected Work"
             title="Full-stack projects engineered end to end."
             description="A selection of applications where I worked across product UI, backend APIs, authentication, authorization, data modeling, automated testing, CI/CD, and deployment."
           />
-
           <p className="max-w-sm text-sm leading-6 text-slate-500 lg:text-right">
             Built with an emphasis on maintainability, security, testing, and
             production readiness.

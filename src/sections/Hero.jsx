@@ -43,20 +43,20 @@ function Hero() {
   return (
     <section
       id="home"
-      className="relative isolate overflow-hidden bg-white px-6 pb-24 pt-32 sm:pt-36 lg:px-8 lg:pb-32 lg:pt-40"
+      className="relative isolate scroll-mt-[72px] overflow-hidden bg-white px-6 pb-24 pt-36 sm:pt-40 lg:px-8 lg:pb-32 lg:pt-40"
     >
       {/* Background accent */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10"
       >
-        <div className="absolute left-1/2 top-10 h-[420px] w-[850px] -translate-x-1/2 rounded-full bg-blue-100/35 blur-3xl" />
+        <div className="absolute left-1/2 top-10 h-[420px] w-[850px] -translate-x-1/2 rounded-full bg-blue-100/30 blur-3xl" />
       </div>
 
-      <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1.08fr_0.92fr] lg:gap-20">
+      <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1.12fr_0.88fr] lg:gap-16">
         {/* Intro */}
         <div>
-          <p className="inline-flex items-center gap-2.5 rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-sm font-medium text-slate-700 shadow-sm backdrop-blur">
+          <p className="inline-flex items-center gap-2.5 rounded-full border border-slate-200 bg-white/90 px-4 py-2 text-sm font-medium text-slate-700 shadow-sm backdrop-blur">
             <span
               aria-hidden="true"
               className="h-2 w-2 rounded-full bg-emerald-500"
@@ -67,13 +67,14 @@ function Hero() {
           <h1 className="mt-7 max-w-3xl text-4xl font-bold tracking-[-0.04em] text-slate-950 sm:text-5xl lg:text-[3.6rem] lg:leading-[1.06]">
             Full-stack JavaScript developer building{" "}
             <span className="text-blue-600">production-ready products</span>{" "}
-            with real-world engineering.
+            with end-to-end engineering.
           </h1>
 
           <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600">
-            I&apos;m Jayesh Thakur. I build end-to-end web applications with
-            React, Node.js, Express, and MongoDB — covering secure
-            authentication, REST APIs, automated testing, CI/CD, and deployment.
+            I&apos;m Jayesh Thakur. I build full-stack web applications with
+            React, Node.js, Express, and MongoDB, with a focus on secure
+            authentication, scalable APIs, automated testing, CI/CD, and
+            deployment.
           </p>
 
           {/* Actions */}
@@ -99,13 +100,13 @@ function Hero() {
               target="_blank"
               rel="noreferrer"
               aria-label="Open Jayesh Thakur's GitHub profile"
-              className={`rounded-xl px-5 py-3.5 text-sm font-semibold text-slate-600 transition hover:text-slate-950 ${focusRing}`}
+              className={`rounded-xl px-5 py-3.5 text-sm font-semibold text-slate-600 transition duration-200 hover:text-slate-950 ${focusRing}`}
             >
               GitHub ↗
             </a>
           </div>
 
-          {/* Stack */}
+          {/* Core stack */}
           <div className="mt-12 border-t border-slate-200 pt-6">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
               Core stack
@@ -125,19 +126,20 @@ function Hero() {
         </div>
 
         {/* Featured project */}
-        <div className="relative">
+        <div className="relative w-full max-w-[560px] justify-self-end">
           <div
             aria-hidden="true"
-            className="absolute inset-x-10 bottom-0 -z-10 h-32 rounded-full bg-blue-200/40 blur-3xl"
+            className="absolute inset-x-10 bottom-0 -z-10 h-32 rounded-full bg-blue-200/35 blur-3xl"
           />
 
           <article className="overflow-hidden rounded-3xl border border-slate-800 bg-slate-950 shadow-2xl shadow-slate-950/20">
             {/* Card header */}
-            <div className="flex items-center justify-between border-b border-white/10 px-6 py-4 sm:px-8">
+            <div className="flex items-center justify-between border-b border-white/10 px-6 py-4 sm:px-7">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-blue-400">
                   Featured project
                 </p>
+
                 <p className="mt-1 text-xs text-slate-500">
                   Full-stack application
                 </p>
@@ -152,15 +154,15 @@ function Hero() {
               </span>
             </div>
 
-            <div className="px-6 pb-7 pt-7 sm:px-8 sm:pb-8">
+            <div className="px-6 pb-6 pt-6 sm:px-7 sm:pb-7">
               <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
                 Opsentra Business OS
               </h2>
 
-              <p className="mt-4 leading-7 text-slate-400">
+              <p className="mt-4 max-w-lg leading-7 text-slate-400">
                 A multi-user business operations platform with secure
-                authentication, user-scoped authorization, project workflows,
-                dashboards, automated tests, and continuous deployment.
+                authentication, isolated user workspaces, automated testing, and
+                continuous deployment.
               </p>
 
               {/* Features */}
@@ -176,8 +178,8 @@ function Hero() {
               </ul>
 
               {/* Engineering proof */}
-              <div className="mt-7 rounded-2xl border border-white/10 bg-white/[0.04] p-5">
-                <div className="flex items-center justify-between gap-4">
+              <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+                <div className="flex items-start justify-between gap-4">
                   <div>
                     <p className="text-sm font-semibold text-white">
                       Engineering proof
@@ -188,7 +190,7 @@ function Hero() {
                     </p>
                   </div>
 
-                  <span className="rounded-md bg-blue-400/10 px-2.5 py-1 text-xs font-semibold text-blue-300">
+                  <span className="shrink-0 rounded-md bg-blue-400/10 px-2.5 py-1 text-xs font-semibold text-blue-300">
                     GitHub Actions
                   </span>
                 </div>
@@ -197,14 +199,14 @@ function Hero() {
                   {pipeline.map((step) => (
                     <li
                       key={step.label}
-                      className="flex items-center justify-between gap-4 py-3 text-sm"
+                      className="flex items-center justify-between gap-4 py-2.5 text-sm"
                     >
                       <span className="flex items-center gap-3 text-slate-200">
                         <CheckIcon />
                         {step.label}
                       </span>
 
-                      <span className="font-medium text-slate-400">
+                      <span className="shrink-0 font-medium text-slate-400">
                         {step.result}
                       </span>
                     </li>
@@ -213,7 +215,7 @@ function Hero() {
               </div>
 
               {/* Project actions */}
-              <div className="mt-7 flex flex-wrap gap-3">
+              <div className="mt-6 flex flex-wrap gap-3">
                 <a
                   href="https://nexora-web-v8fa.onrender.com"
                   target="_blank"
