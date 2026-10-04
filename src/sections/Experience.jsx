@@ -8,12 +8,14 @@ const experience = [
     location: "CRCA Unit · Khopoli, Maharashtra",
     current: true,
     description:
-      "Supporting technical plant operations in a structured industrial environment while working within EHS, quality, and standard operating procedures.",
-    highlights: [
-      "TPM & process monitoring",
-      "5S & workplace discipline",
+      "Supporting technical plant operations in a process-driven industrial environment while working within EHS, quality, and standard operating procedures.",
+    responsibilities: [
+      "Process monitoring",
+      "TPM practices",
+      "5S workplace discipline",
       "Kaizen & continuous improvement",
-      "EHS & quality standards",
+      "EHS procedures",
+      "Quality standards",
     ],
   },
   {
@@ -23,8 +25,8 @@ const experience = [
     location: "Khopoli, Maharashtra",
     current: false,
     description:
-      "Completed a one-year technical apprenticeship with hands-on exposure to plant operations, safety protocols, material handling, and quality control.",
-    highlights: [
+      "Completed a one-year technical apprenticeship with practical exposure to plant operations, safety procedures, material handling, and quality control.",
+    responsibilities: [
       "Plant operations",
       "Safety procedures",
       "Material handling",
@@ -33,11 +35,22 @@ const experience = [
   },
 ];
 
-const engineeringHabits = [
-  "Process discipline",
-  "Quality mindset",
-  "Structured problem solving",
-  "Continuous improvement",
+const transferableStrengths = [
+  {
+    title: "Process discipline",
+    description:
+      "Working within defined procedures and repeatable operational workflows.",
+  },
+  {
+    title: "Quality mindset",
+    description:
+      "Paying attention to standards, validation, and reliable outcomes.",
+  },
+  {
+    title: "Continuous improvement",
+    description:
+      "Looking for practical ways to improve processes through structured iteration.",
+  },
 ];
 
 function Experience() {
@@ -48,47 +61,21 @@ function Experience() {
       className="scroll-mt-[72px] border-y border-slate-200 bg-slate-50/70 px-6 py-20 sm:py-24 lg:px-8 lg:py-28"
     >
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:gap-16">
-          {/* Section intro */}
+        <SectionHeading
+          eyebrow="Professional Experience"
+          title="Industrial experience that shaped how I work."
+          description="My background in technical operations taught me to work with process discipline, quality standards, safety procedures, and continuous improvement — habits that also influence how I approach software engineering."
+        />
+
+        <div className="mt-14 grid gap-10 lg:grid-cols-[1.3fr_0.7fr] lg:gap-12">
+          {/* Experience timeline */}
           <div>
-            <SectionHeading
-              eyebrow="Experience"
-              title="Industrial experience that shaped how I engineer."
-              description="Before moving deeper into software, I worked in structured technical operations where safety, quality, process discipline, and continuous improvement were part of everyday work."
-            />
+            <div className="relative space-y-6">
+              <div
+                aria-hidden="true"
+                className="absolute bottom-10 left-[7px] top-10 hidden w-px bg-slate-200 sm:block"
+              />
 
-            <div className="mt-8 max-w-md rounded-2xl border border-slate-200 bg-white p-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-600">
-                What I carry into software
-              </p>
-
-              <p className="mt-3 text-sm leading-7 text-slate-600">
-                The same habits apply to software engineering: understand the
-                system, follow a repeatable process, validate the result, and
-                improve what can be improved.
-              </p>
-
-              <div className="mt-5 flex flex-wrap gap-2">
-                {engineeringHabits.map((habit) => (
-                  <span
-                    key={habit}
-                    className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-semibold text-slate-600"
-                  >
-                    {habit}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Timeline */}
-          <div className="relative">
-            <div
-              aria-hidden="true"
-              className="absolute bottom-4 left-[7px] top-4 hidden w-px bg-slate-200 sm:block"
-            />
-
-            <div className="space-y-6">
               {experience.map((item) => (
                 <div
                   key={`${item.role}-${item.period}`}
@@ -96,14 +83,13 @@ function Experience() {
                 >
                   <span
                     aria-hidden="true"
-                    className={`absolute left-0 top-8 hidden h-[15px] w-[15px] rounded-full border-4 border-slate-50 sm:block ${
+                    className={`absolute left-0 top-9 hidden h-[15px] w-[15px] rounded-full border-4 border-slate-50 sm:block ${
                       item.current ? "bg-blue-600" : "bg-slate-300"
                     }`}
                   />
 
-                  <article className="rounded-3xl border border-slate-200 bg-white p-7 transition duration-300 hover:border-slate-300 hover:shadow-xl hover:shadow-slate-900/5 sm:p-8">
-                    {/* Top row */}
-                    <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                  <article className="group rounded-3xl border border-slate-200 bg-white p-7 transition duration-300 hover:border-slate-300 hover:shadow-xl hover:shadow-slate-900/5 sm:p-8">
+                    <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
                       <div>
                         <div className="flex flex-wrap items-center gap-3">
                           <p className="text-sm font-semibold text-blue-600">
@@ -121,11 +107,11 @@ function Experience() {
                           )}
                         </div>
 
-                        <h3 className="mt-3 text-2xl font-semibold tracking-[-0.02em] text-slate-950">
+                        <h3 className="mt-3 text-2xl font-semibold tracking-[-0.025em] text-slate-950">
                           {item.role}
                         </h3>
 
-                        <p className="mt-1 text-base font-medium text-slate-700">
+                        <p className="mt-1 text-base font-semibold text-slate-700">
                           {item.company}
                         </p>
 
@@ -134,36 +120,81 @@ function Experience() {
                         </p>
                       </div>
 
-                      <div
-                        aria-hidden="true"
-                        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 text-blue-600"
-                      >
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 text-blue-600">
                         <IndustryIcon />
                       </div>
                     </div>
 
-                    {/* Description */}
-                    <p className="mt-6 max-w-2xl leading-7 text-slate-600">
+                    <p className="mt-6 max-w-3xl leading-7 text-slate-600">
                       {item.description}
                     </p>
 
-                    {/* Highlights */}
-                    <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-                      {item.highlights.map((highlight) => (
-                        <li
-                          key={highlight}
-                          className="flex items-center gap-2.5 text-sm font-medium text-slate-700"
-                        >
-                          <CheckIcon />
-                          {highlight}
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="mt-7 border-t border-slate-100 pt-6">
+                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
+                        Areas of exposure
+                      </p>
+
+                      <ul className="mt-4 grid gap-x-6 gap-y-3 sm:grid-cols-2">
+                        {item.responsibilities.map((responsibility) => (
+                          <li
+                            key={responsibility}
+                            className="flex items-center gap-2.5 text-sm font-medium text-slate-700"
+                          >
+                            <CheckIcon />
+                            {responsibility}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </article>
                 </div>
               ))}
             </div>
           </div>
+
+          {/* Transferable strengths */}
+          <aside className="lg:pt-1">
+            <div className="rounded-3xl border border-slate-800 bg-slate-950 p-7 shadow-xl shadow-slate-950/10 sm:p-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-400">
+                Transferable Strengths
+              </p>
+
+              <h3 className="mt-4 text-2xl font-semibold tracking-[-0.025em] text-white">
+                What I carry into software engineering.
+              </h3>
+
+              <p className="mt-4 text-sm leading-7 text-slate-400">
+                Working in industrial operations reinforced habits that matter
+                in technical work: consistency, ownership, validation, and
+                continuous improvement.
+              </p>
+
+              <div className="mt-7 space-y-5">
+                {transferableStrengths.map((strength, index) => (
+                  <div
+                    key={strength.title}
+                    className="border-t border-white/10 pt-5 first:border-t-0 first:pt-0"
+                  >
+                    <div className="flex gap-4">
+                      <span className="mt-0.5 text-xs font-semibold text-blue-400">
+                        0{index + 1}
+                      </span>
+
+                      <div>
+                        <h4 className="text-sm font-semibold text-white">
+                          {strength.title}
+                        </h4>
+
+                        <p className="mt-2 text-sm leading-6 text-slate-400">
+                          {strength.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </aside>
         </div>
       </div>
     </section>

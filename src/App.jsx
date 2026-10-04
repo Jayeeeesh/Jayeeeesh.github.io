@@ -11,9 +11,16 @@ import Contact from "./sections/Contact.jsx";
 function App() {
   return (
     <>
+      <a
+        href="#main-content"
+        className="fixed left-4 top-4 z-[100] -translate-y-24 rounded-lg bg-slate-950 px-4 py-3 text-sm font-semibold text-white shadow-lg transition-transform focus:translate-y-0"
+      >
+        Skip to main content
+      </a>
+
       <Navbar />
 
-      <main>
+      <main id="main-content">
         <Hero />
         <Projects />
         <Skills />
