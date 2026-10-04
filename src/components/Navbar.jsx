@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const navLinks = [
   { label: "Projects", href: "#projects" },
@@ -8,6 +8,9 @@ const navLinks = [
   { label: "Contact", href: "#contact" },
 ];
 
+const focusRing =
+  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2";
+
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -15,17 +18,35 @@ function Navbar() {
     setIsMenuOpen(false);
   };
 
+  useEffect(() => {
+    if (!isMenuOpen) {
+      return undefined;
+    }
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isMenuOpen]);
+
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-xl">
       <nav
         aria-label="Primary navigation"
         className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-6 lg:px-8"
       >
-        {/* Brand */}
         <a
           href="#home"
           onClick={closeMenu}
-          className="inline-flex items-center text-lg font-bold tracking-[-0.03em] text-slate-950"
+          aria-label="Go to homepage"
+          className={`inline-flex items-center text-lg font-bold tracking-[-0.03em] text-slate-950 ${focusRing}`}
         >
           Jayesh
           <span className="text-blue-600">.</span>
@@ -37,7 +58,7 @@ function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm font-medium text-slate-600 transition-colors hover:text-slate-950"
+              className={`text-sm font-medium text-slate-600 transition-colors hover:text-slate-950 ${focusRing}`}
             >
               {link.label}
             </a>
@@ -49,7 +70,8 @@ function Navbar() {
             href="/resume.pdf"
             target="_blank"
             rel="noreferrer"
-            className="text-sm font-semibold text-slate-700 transition-colors hover:text-slate-950"
+            aria-label="Open Jayesh Thakur's resume in a new tab"
+            className={`text-sm font-semibold text-slate-700 transition-colors hover:text-slate-950 ${focusRing}`}
           >
             Resume ↗
           </a>
@@ -58,14 +80,14 @@ function Navbar() {
             href="https://github.com/Jayeeeesh"
             target="_blank"
             rel="noreferrer"
-            aria-label="Open Jayesh Thakur's GitHub profile"
-            className="rounded-lg bg-slate-950 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800"
+            aria-label="Open Jayesh Thakur's GitHub profile in a new tab"
+            className={`rounded-lg bg-slate-950 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800 ${focusRing}`}
           >
             GitHub
           </a>
         </div>
 
-        {/* Mobile trigger */}
+        {/* Mobile menu trigger */}
         <button
           type="button"
           aria-label={
@@ -74,7 +96,7 @@ function Navbar() {
           aria-expanded={isMenuOpen}
           aria-controls="mobile-navigation"
           onClick={() => setIsMenuOpen((current) => !current)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 transition hover:bg-slate-50 md:hidden"
+          className={`inline-flex h-11 w-11 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 transition hover:bg-slate-50 md:hidden ${focusRing}`}
         >
           {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
         </button>
@@ -92,7 +114,7 @@ function Navbar() {
                 key={link.label}
                 href={link.href}
                 onClick={closeMenu}
-                className="border-b border-slate-100 py-4 text-base font-medium text-slate-700 transition-colors hover:text-slate-950"
+                className={`border-b border-slate-100 py-4 text-base font-medium text-slate-700 transition-colors hover:text-slate-950 ${focusRing}`}
               >
                 {link.label}
               </a>
@@ -104,7 +126,8 @@ function Navbar() {
                 target="_blank"
                 rel="noreferrer"
                 onClick={closeMenu}
-                className="rounded-lg border border-slate-300 px-4 py-3 text-center text-sm font-semibold text-slate-800 transition hover:bg-slate-50"
+                aria-label="Open Jayesh Thakur's resume in a new tab"
+                className={`rounded-lg border border-slate-300 px-4 py-3 text-center text-sm font-semibold text-slate-800 transition hover:bg-slate-50 ${focusRing}`}
               >
                 Resume ↗
               </a>
@@ -114,7 +137,8 @@ function Navbar() {
                 target="_blank"
                 rel="noreferrer"
                 onClick={closeMenu}
-                className="rounded-lg bg-slate-950 px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-slate-800"
+                aria-label="Open Jayesh Thakur's GitHub profile in a new tab"
+                className={`rounded-lg bg-slate-950 px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-slate-800 ${focusRing}`}
               >
                 GitHub ↗
               </a>
@@ -151,7 +175,7 @@ function CloseIcon() {
       strokeWidth="1.8"
       className="h-5 w-5"
     >
-      <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
+      <path d="M6 6l12 12M18 6 6 18" strokeLinecap="round" />
     </svg>
   );
 }
