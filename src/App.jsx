@@ -3,6 +3,7 @@ import Footer from "./components/Footer.jsx";
 
 import Hero from "./sections/Hero.jsx";
 import Projects from "./sections/Projects.jsx";
+import OpsentraCaseStudy from "./sections/OpsentraCaseStudy.jsx";
 import Skills from "./sections/Skills.jsx";
 import Experience from "./sections/Experience.jsx";
 import About from "./sections/About.jsx";
@@ -23,6 +24,7 @@ function App() {
       <main id="main-content">
         <Hero />
         <Projects />
+        <OpsentraCaseStudy />
         <Skills />
         <Experience />
         <About />
